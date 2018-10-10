@@ -21,16 +21,25 @@ app {
 }
 
     .main .top-row {
-        background-color: #e6e6e6;
+        background-color: white;
         border-bottom: 1px solid #d6d5d5;
     }
 
-.sidebar {
+/*
+    .main .top-row {
+        background-color: #e6e6e6;
+        border-bottom: 1px solid #d6d5d5;
+    }
+    .sidebar {
     background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+}
+    */
+.sidebar {
+    background-image: linear-gradient(180deg, rgb(44, 46, 61) 0%, rgb(44, 46, 61) 70%);
 }
 
     .sidebar .top-row {
-        background-color: rgba(0,0,0,0.4);
+        background-color: rgb(40, 41, 59);
     }
 
     .sidebar .navbar-brand {

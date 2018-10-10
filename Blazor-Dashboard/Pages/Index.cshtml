@@ -1,7 +1,131 @@
-﻿@page "/"
+﻿@addTagHelper *, DoughnutChartComponent
+@using DoughnutChartComponent;
 
-<h1>Hello, world!</h1>
+@page "/"
 
-Welcome to your new app.
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+<div class="jumbotron">
+    <div class="container-fluid">
+        <h1>Admin Dashboard</h1>
+        <p>This is an ultra lightweight admin dashboard based in Blazor that we are experimenting to use in our ASP.NET project. The aim is to use Blazor, CSS, CSS Grid and Bootsrap for front end development with the design philosophy of keeping the components modern and lightweight with minimal dependencies. We strongly believe that less dependencies equate to ease of upgrade. On the other hand, if Blazor or Bootstrap introduces new components that overlap with those in this project, the idea is to let the components in Blazor and Boostrap take precedence. This template is available under the MIT License, so feel free to use it for your own project.</p>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-4">
+            <h2>Blazor</h2>
+            <p>Blazor is an experimental .NET web framework using C# and HTML that runs in the browser. Blazor, together with Mono, compiles your Web UI and C# to WebAssembly.</p>
+            <p><a href="https://blazor.net" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
+        </div>
+        <div class="col-xl-4">
+            <h2>CSS Grid</h2>
+            <p>The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.</p>
+            <p><a href="https://www.w3.org/TR/css-grid-1/" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
+        </div>
+        <div class="col-xl-4">
+            <h2>Bootstrap 4</h2>
+            <p>Bootstrap is a free and open-source front-end framework for designing websites and web applications. It contains design templates for typography, forms, buttons and navigation.</p>
+            <p><a href="https://getbootstrap.com/" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-xl-4">
+            <h2>Doughnut Chart</h2>
+            <DoughnutChart></DoughnutChart>
+        </div>
+        <div class="col-xl-4">
+            <h2>Pie Chart</h2>
+            <Component1></Component1>
+        </div>
+        <div class="col-xl-4">
+            <h2>Line Chart</h2>
+            <Component1></Component1>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-xl-4">
+            <h2>Area Chart</h2>
+            <Component1></Component1>
+        </div>
+        <div class="col-xl-4">
+            <h2>Bar Chart</h2>
+            <Component1></Component1>
+        </div>
+        <div class="col-xl-4">
+            <h2>Bullet Bars</h2>
+            <Component1></Component1>
+        </div>
+    </div>
+    <hr>
+    <div class="card-columns">
+        <div class="card bg-primary">
+            <div class="card-body text-center">
+                <p class="card-text">Info card</p>
+            </div>
+        </div>
+        <div class="card bg-warning">
+            <div class="card-body text-center">
+                <p class="card-text">Info card</p>
+            </div>
+        </div>
+        <div class="card bg-success">
+            <div class="card-body text-center">
+                <p class="card-text">Info card</p>
+            </div>
+        </div>
+        <div class="card bg-danger">
+            <div class="card-body text-center">
+                <p class="card-text">Info card</p>
+            </div>
+        </div>
+        <div class="card bg-light">
+            <div class="card-body text-center">
+                <p class="card-text">Info card</p>
+            </div>
+        </div>
+        <div class="card bg-info">
+            <div class="card-body text-center">
+                <p class="card-text">Info card</p>
+            </div>
+        </div>
+    </div>
+    <hr />
+
+    <div class="card-group">
+        <!-- card -->
+        <div class="card">
+            <img class="card-img-top img-fluid" alt="Card image cap" src="images/floral-pattern-background-569.jpg">
+            <div class="card-body">
+                <h4 class="card-title">New Features</h4>
+                <p class="card-text" style="font-weight:300">Lorem Ipsum is simply dummy text of the printing and typesetting industry scrambled it to make text of the printing and typesetting industry scrambled a type specimen book text of the dummy text of the printing printing and typesetting industry scrambled dummy text of the printing. </p>
+            </div>
+        </div>
+        <!-- card -->
+        <div class="card">
+            <img class="card-img-top img-fluid" alt="Card image cap" src="images/wallpaper-110.jpg">
+            <div class="card-body">
+                <h4 class="card-title">Support Cases</h4>
+                <p class="card-text" style="font-weight:300">Lorem Ipsum is simply dummy text of the printing and typesetting industry scrambled it to make text of the printing and typesetting industry scrambled a type specimen book text of the dummy text of the printing printing and typesetting industry scrambled dummy text of the printing. </p>
+            </div>
+        </div>
+        <!-- card -->
+        <div class="card">
+            <img class="card-img-top img-fluid" alt="Card image cap" src="images/floral-pattern-background-1167.jpg">
+            <div class="card-body">
+                <h4 class="card-title">Roadmap</h4>
+                <p class="card-text" style="font-weight:300">Lorem Ipsum is simply dummy text of the printing and typesetting industry scrambled it to make text of the printing and typesetting industry scrambled a type specimen book text of the dummy text of the printing printing and typesetting industry scrambled dummy text of the printing. </p>
+
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-xs-12">
+            <footer>
+                <p>&copy; Available under MIT License.</p>
+            </footer>
+        </div>
+    </div>
+</div>
