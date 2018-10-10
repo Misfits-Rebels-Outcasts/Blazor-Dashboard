@@ -5,10 +5,6 @@ VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor-Dashboard", "Blazor-Dashboard\Blazor-Dashboard.csproj", "{11603D5D-2018-42C4-A0AE-B8BD885F4F22}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoughnutChartComponent", "..\Blazor-Charts\DoughnutChartComponent\DoughnutChartComponent.csproj", "{DF2278E1-F267-410C-9273-1FAE3D0DF615}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LineChartComponent", "..\Blazor-Charts\LineChartComponent\LineChartComponent.csproj", "{CF3A8166-43BE-4F31-82B1-0BAEFBEE18BE}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,14 +15,6 @@ Global
 		{11603D5D-2018-42C4-A0AE-B8BD885F4F22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11603D5D-2018-42C4-A0AE-B8BD885F4F22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11603D5D-2018-42C4-A0AE-B8BD885F4F22}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DF2278E1-F267-410C-9273-1FAE3D0DF615}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DF2278E1-F267-410C-9273-1FAE3D0DF615}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DF2278E1-F267-410C-9273-1FAE3D0DF615}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DF2278E1-F267-410C-9273-1FAE3D0DF615}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CF3A8166-43BE-4F31-82B1-0BAEFBEE18BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CF3A8166-43BE-4F31-82B1-0BAEFBEE18BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CF3A8166-43BE-4F31-82B1-0BAEFBEE18BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CF3A8166-43BE-4F31-82B1-0BAEFBEE18BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
