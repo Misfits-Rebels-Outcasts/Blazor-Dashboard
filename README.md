@@ -10,7 +10,7 @@ Prerequisite
 2. Visual Studio 2017 with Blazor Extensions
 
 Build the Admin Dashboard
-1. Clone or Download Misfits-Rebels-Outcasts/Blazor-Dashboard.
+1. Clone or Download [a Misfits-Rebels-Outcasts/Blazor-Dashboard](https://github.com/Misfits-Rebels-Outcasts/Blazor-Dashboard).
 2. Clone or Download Misfits-Rebels-Outcasts/Blazor-Charts.
 3. Launch Blazor-Dashboard.sln in Visual Studio.
 4. Add Existing Project to DoughnutChartComponent.csproj.
