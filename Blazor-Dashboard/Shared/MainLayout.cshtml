@@ -5,29 +5,50 @@
 </div>
 
 <div class="main">
-    <!--
-    <ul class="nav nav-tabs">
-        <li class="active"><a href="#">Home</a></li>
-        <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                Menu 1
-                <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-                <li><a href="#">Submenu 1-1</a></li>
-                <li><a href="#">Submenu 1-2</a></li>
-                <li><a href="#">Submenu 1-3</a></li>
-            </ul>
-        </li>
-        <li><a href="#">Menu 2</a></li>
-        <li><a href="#">Menu 3</a></li>
-    </ul>
-            -->
-    <div class="top-row px-4">
-        <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
+
+    <div class="top-row">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light d-flex justify-content-end" style=" height: 3.5rem; border-bottom: 1px solid #d6d5d5;">
+                <a class="navbar-brand abs" href="#">Navbar 1</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="collapsingNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"><span class="oi oi-task" aria-hidden="true"></span> Actions</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Report</a>
+                                <a class="dropdown-item" href="#">Resend</a>
+                                <a class="dropdown-item" href="#">Upgrade</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"><span class="oi oi-wrench" aria-hidden="true"></span> Issues</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Installation Issues</a>
+                                <a class="dropdown-item" href="#">Bugs</a>
+                                <a class="dropdown-item" href="#">Operations</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"><span class="oi oi-briefcase" aria-hidden="true"></span> Reports</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Sales Report</a>
+                                <a class="dropdown-item" href="#">Profit Report</a>
+                                <a class="dropdown-item" href="#">Region</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="ml-auto" style="vertical-align:middle"><img src="images/person3.png" width="40" height="40" class="rounded-circle"></div>
+
+                </div>
+    
+        </nav>
+
     </div>
 
     <div class="content px-4">
         @Body
     </div>
+
 </div>
