@@ -3,7 +3,7 @@ Admin Dashboard Template Theme for Blazor
 
 This is an ultra lightweight admin dashboard based in Blazor. We are experimenting this in our ASP.NET project. The aim is to use Blazor, CSS, CSS Grid and Bootstrap for front end development with the design philosophy of keeping the components modern and lightweight with minimal dependencies. We strongly believe that less dependencies means easier to upgrade. On the other hand, if Blazor or Bootstrap introduces new components that overlap with those in this project, the idea is to let the components in Blazor and Boostrap take precedence. This template is available under the MIT License, so feel free play with it.
 
-![Blazor Dashboard](https://barcoderesource.com/blazor/blazordashboard.png)
+![Blazor Dashboard](https://barcoderesource.com/blazor/blazordashboardtheme.png)
 
 Prerequisite
 1. Blazor 0.6 or onwards is installed
