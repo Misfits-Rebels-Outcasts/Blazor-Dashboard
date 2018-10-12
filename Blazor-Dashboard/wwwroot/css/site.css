@@ -102,7 +102,39 @@ app {
 .navbar-toggler {
     background-color: rgba(255, 255, 255, 0.1);
 }
+/*
+@media (max-width: 767.98px) {
+    .main .top-row {
+        display: none;
+    }
+    .main .top-row navbar{
+        display: none;
+    }
+}
 
+    @media (max-width: 991.98px) {
+    .main .top-row {
+        display: none;
+    }
+    .main .top-row navbar{
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    app {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+
+*/
 @media (max-width: 767.98px) {
     .main .top-row {
         display: none;
