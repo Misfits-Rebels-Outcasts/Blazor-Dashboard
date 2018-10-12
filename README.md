@@ -18,3 +18,4 @@ Build the Admin Dashboard
 6. Right Click Dependencies and Add Reference... to DoughnutChartComponent and LineChartComponent project.
 7. Rebuild and Run Blazor-Dashboard in IIS Express.
 
+
