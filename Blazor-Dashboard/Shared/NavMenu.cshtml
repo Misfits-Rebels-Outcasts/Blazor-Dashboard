@@ -1,35 +1,56 @@
 ﻿<div class="top-row pl-4 navbar navbar-dark">
-    <a class="navbar-brand" href="">Blazor-Dashboard</a>
-    <button class="navbar-toggler" onclick=@ToggleNavMenu>
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    <a class="navbar-brand" href="">BLAZOR DASHBOARD</a>
+    <div>
+        <button class="navbar-toggler" onclick=@ToggleSideMenu>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <button class="navbar-toggler" style="padding-top:2.2px" onclick=@ToggleNavMenu>
+            <!--
+            <span class="oi oi-excerpt" aria-hidden="true" style="font-size:1.1em;height:30px;padding-top:2px;padding-bottom:0px;padding-left:-2px;padding-right:-2px;background:blue"></span>
+            <span class="oi oi-excerpt" aria-hidden="true" style="font-size:1.1em;padding-top:3px;padding-bottom:3px"></span>
+            <span class="oi oi-excerpt" aria-hidden="true" style="font-size:1.25em;width:1.5em;height:1.2em"></span>
+            -->
+            <span class="oi oi-excerpt" aria-hidden="true" style="font-size:1.10em;width:1.3em;height:1.45em;padding-top:7px;font-weight:200"></span>
+        </button>
+    </div>
 </div>
 
-<div class=@(collapseNavMenu ? "collapse" : null) onclick=@ToggleNavMenu>
+<div class=@(collapseSideMenu ? "collapse" : null) onclick=@ToggleSideMenu>
     <ul class="nav flex-column">
-        <li class="nav-itemb px-3">
+        <li class="nav-item-side px-3">
             <NavLink class="nav-link" href="" Match=NavLinkMatch.All>
                 <span class="oi oi-home" aria-hidden="true"></span> Home
             </NavLink>
         </li>
-        <li class="nav-itemb px-3">
+        <li class="nav-item-side px-3">
             <NavLink class="nav-link" href="counter">
                 <span class="oi oi-plus" aria-hidden="true"></span> Counter
             </NavLink>
         </li>
-        <li class="nav-itemb px-3">
+        <li class="nav-item-side px-3">
             <NavLink class="nav-link" href="fetchdata">
                 <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
             </NavLink>
         </li>
+
     </ul>
 </div>
 
 @functions {
-    bool collapseNavMenu = true;
+    bool collapseSideMenu = true;
+
+    void ToggleSideMenu()
+    {
+        collapseSideMenu = !collapseSideMenu;
+    }
+
+    //bool collapseNavMenu = true;
 
     void ToggleNavMenu()
     {
-        collapseNavMenu = !collapseNavMenu;
+        //collapseNavMenu = !collapseNavMenu;
+        BlazorDashboard.XSingleton.NavBarDisplay = !BlazorDashboard.XSingleton.NavBarDisplay;
+        StateHasChanged();
     }
+
 }
