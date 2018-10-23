@@ -5,6 +5,15 @@ This is an ultra lightweight admin dashboard based in Blazor. We are experimenti
 
 ![Blazor Dashboard](https://barcoderesource.com/blazor/blazordashboardtheme.png)
 
+Reponsive
+<p>
+<img width="349" height="601" src=https://barcoderesource.com/blazor/blazorresponsive.png />
+</p>   
+Slide In Side Bar
+<p>
+<img width="349" height="601"  src=https://barcoderesource.com/blazor/slideinsidebar.png />
+</p>   
+
 Prerequisite
 1. Blazor 0.6 or onwards is installed
 2. Visual Studio 2017 with Blazor Extensions
