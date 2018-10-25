@@ -8,9 +8,9 @@ body,
 
 .sidebar-main-container {
     position: relative;
-    overflow: hidden;
+    z-index:1;
     /*
-    The following two lines allows the sidebar to be fixed
+    overflow: hidden;
     */
     display: flex;
     flex-direction: row;
@@ -21,7 +21,7 @@ body,
 	left: 0;
 	top:0;
 	height: 100%;
-	z-index: 199;
+	z-index: 198;
 	perspective: 1000px;
 	transition: transform 0.5s;
 }
@@ -47,9 +47,9 @@ body,
 
 .sidebar-nav {
     position: absolute;
-    top: 0;
+    top: -50px;
     left: 0;
-    z-index: 200;
+    z-index: 200; 
     visibility: visible;
     width: 225px;
     height: 100%;
@@ -58,17 +58,32 @@ body,
     transform: translate3d(-100%, 0, 0);
 }
 
+.slide-sidebar-nav {
+    position: relative;
+    top: 0;
+}
+
 .sidebar-nav-open .sidebar-nav {
 	visibility: visible;
 	transform: translate3d(0, 0, 0);
 }
-
 
 @media (max-width: 991.98px) {
 
     .sidebar-main-container {
         flex-direction: column;
     }
+    /*
+    this will occur after slide in too late
+
+    .sidebar-nav-open .sidebar-cover {
+        z-index: 299;
+    }
+    .sidebar-nav-open .sidebar-nav {
+        z-index: 301;
+    }
+    */
+
 }
 
 /*

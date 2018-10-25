@@ -1,0 +1,3 @@
+﻿CoverClick Issue
+TopBar Sticky
+ToggleSideMenu no longer used.

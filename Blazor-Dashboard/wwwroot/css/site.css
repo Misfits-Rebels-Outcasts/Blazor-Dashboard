@@ -8,25 +8,16 @@ app {
     position: relative;
     display: flex;
     flex-direction: column;
-    /*
-    height: 100%;
-    */
-}
-/*
-.top-row {
-    height: 3.5rem;
-    display: flex;
-    align-items: center;
 
 }
 
-*/
 .top-row {
     height: 3.5rem;
 
 }
 .top-row-blank {
     height: 3.5rem;
+
 }
 
 .main {
@@ -35,29 +26,16 @@ app {
 
     .main .top-row {
         background-color: #F8F9FB;
-        border-bottom: 1px solid #d6d5d5;
-        z-index:100;
-        display:block;
+        border-bottom: 1px solid #d6d5d5;        
+        z-index: 199;      
+        display: block;
+        position:sticky;
+        top:0;
     }
-
-    .main .top-row-blank {
-        background-color: #F8F9FB;
-        border-bottom: 1px solid #d6d5d5;
-        z-index: 100;
-        display: none;
-    }
-
-    .main .top-row-blank .navbar {
-        height: 3.5rem;
-        border-bottom: 1px solid #d6d5d5;
-    }
-
         .main .top-row .navbar {
             height: 3.5rem;
             border-bottom: 1px solid #d6d5d5;
         }
-
-
             .main .top-row .navbar .navbar-collapse .navbar-nav .action {
                 vertical-align: middle;
             }
@@ -76,44 +54,44 @@ app {
                 vertical-align: middle
             }
 
-            .main .top-row-blank .navbar .navbar-collapse .navbar-nav .action {
+    .main .top-row-blank .navbar .navbar-collapse .navbar-nav .action {
+        vertical-align: middle;
+    }
+
+    .main .top-row-blank {
+        background-color: #F8F9FB;
+        border-bottom: 1px solid #d6d5d5;
+        z-index: 199;
+        display: none;
+        position: sticky;
+        top: 0;
+    }
+
+        .main .top-row-blank .navbar {
+            height: 3.5rem;
+            border-bottom: 1px solid #d6d5d5;
+        }
+
+            .main .top-row-blank .navbar .navbar-collapse .navbar-nav .nav-item .bell {
                 vertical-align: middle;
+                margin-top: 8px
             }
 
-    .main .top-row-blank .navbar .navbar-collapse .navbar-nav .nav-item .bell {
-        vertical-align: middle;
-        margin-top: 8px
-    }
+            .main .top-row-blank .navbar .navbar-nav .nav-item .flag {
+                vertical-align: middle;
+                margin-top: 2px
+            }
 
-    .main .top-row-blank .navbar .navbar-nav .nav-item .flag {
-        vertical-align: middle;
-        margin-top: 2px
-    }
+            .main .top-row-blank .navbar .navbar-nav .nav-item .user {
+                vertical-align: middle
+            }
 
-    .main .top-row-blank .navbar .navbar-nav .nav-item .user {
-        vertical-align: middle
-    }
-
-/*
-    .main .top-row {
-        background-color: #e6e6e6;
-        border-bottom: 1px solid #d6d5d5;
-    }
-    .sidebar {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
-}
-    */
 .sidebar {
-    /* original dont have this
-    position: absolute;
+    position: sticky;
     top: 0;
-    left: 0;
-    z-index: 100;
-    visibility: visible;
-    width: 300px;
-    height: 100%;
-    background: #000000;
-    transition: all 0.5s;
+    z-index: 2;
+    /*
+    z-index: 199;
     */
     background-image: linear-gradient(180deg, rgb(44, 46, 61) 0%, rgb(44, 46, 61) 70%);
 }
@@ -132,6 +110,24 @@ app {
         vertical-align: text-top;
         top: -2px;
     }
+
+
+.sidebar-nav-open .ind .top-row {
+    background-color: rgb(40, 41, 59);
+}
+
+.sidebar-nav-open .ind .navbar-brand {
+    font-size: 1.1rem;
+}
+
+.sidebar-nav-open .ind .oi {
+    width: 2rem;
+    font-size: 1.1rem;
+    vertical-align: text-top;
+    top: -2px;
+}
+
+
 
 .nav-item-side {
     font-size: 0.9rem;
@@ -174,78 +170,61 @@ app {
 .navbar-toggler {
     background-color: rgba(255, 255, 255, 0.1);
 }
-/*
-@media (max-width: 767.98px) {
-    .main .top-row {
-        display: none;
-    }
-    .main .top-row navbar{
-        display: none;
-    }
-}
 
-    @media (max-width: 991.98px) {
-    .main .top-row {
-        display: none;
-    }
-    .main .top-row navbar{
-        display: none;
-    }
-}
-
-@media (min-width: 992px) {
-    app {
-        flex-direction: row;
-    }
-
-    .sidebar {
-        width: 250px;
-        height: 100vh;
-        position: sticky;
-        top: 0;
-    }
-
-
-*/
 @media (max-width: 991.98px) {
-
     .main .top-row-blank {
         display: none;
     }
+    .main .top-row {
+        top: 50px;
+        /*shift 50 downwards*/
+    }
+    /*
 
+    .main .top-row-blank {
+        display: none;     
+    }
+
+    .main .top-row {   
+        top: 50px;
+        position: sticky;       
+        z-index: 199;      
+    }
+    */
 }
 
 @media (min-width: 992px) {
-
-    /*this one aint matter coz side bar container emulate this behavior
+  
     app {
         flex-direction: row;
     }
 
-    */
+    .main .top-row-blank {
+        display: block; /*always display whether the top bar hidden or not when large window*/
+    }
+
+    /*
 
     .main .top-row-blank {
         position: sticky;
         top: 0;
         display: block;
+ 
     }
-    /*originally got this.
+    .main .top-row {
+        top: 0px;
+        position: sticky;
+        z-index: 199;
+    }
+    */
 
     .sidebar {
         background: black;
         width: 250px;
-        height:300vh;
+        height: 100vh;
         position: sticky;
         top: 0;
     }
-    */
-
-    .main .top-row {
-        position: sticky;
-        top: 0;
-    }
-
-
 
     .main > div {
         padding-left: 2rem !important;
@@ -255,8 +234,7 @@ app {
     .navbar-toggler {
         display: none;
     }
-
-    
+ 
     .sidebar .collapse {
         display: block;
     }

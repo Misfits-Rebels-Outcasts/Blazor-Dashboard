@@ -1,47 +1,48 @@
-﻿<div class="top-row pl-4 navbar navbar-dark">
-    <a class="navbar-brand" href="">BLAZOR DASHBOARD</a>
-    <div>
-        <button class="navbar-toggler" onclick=@ToggleSideMenu>
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <button class="navbar-toggler" style="padding-top:2.2px" onclick=@ToggleNavMenu>
-            <!--
-            <span class="oi oi-excerpt" aria-hidden="true" style="font-size:1.1em;height:30px;padding-top:2px;padding-bottom:0px;padding-left:-2px;padding-right:-2px;background:blue"></span>
-            <span class="oi oi-excerpt" aria-hidden="true" style="font-size:1.1em;padding-top:3px;padding-bottom:3px"></span>
-            <span class="oi oi-excerpt" aria-hidden="true" style="font-size:1.25em;width:1.5em;height:1.2em"></span>
-            -->
-            <span class="oi oi-excerpt" aria-hidden="true" style="font-size:1.10em;width:1.3em;height:1.45em;padding-top:7px;font-weight:200"></span>
-        </button>
+﻿<nav class=@(SlideIn ? "sidebar-nav" : "")>
+    <div class="top-row pl-4 navbar navbar-dark" >
+        <a class="navbar-brand" href="">BLAZOR DASHBOARD</a>
+        <div style=@(SlideIn ? "visibility:hidden" : "visibility:visible")>
+            <button class="navbar-toggler" onclick=@LaunchSideBar>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <button class="navbar-toggler" style="padding-top:2.2px" onclick=@ToggleNavMenu>
+                <span class="oi oi-excerpt" aria-hidden="true" style="font-size:1.10em;width:1.3em;height:1.45em;padding-top:7px;font-weight:200"></span>
+            </button>
+        </div>
     </div>
-</div>
+    <div class=@(CollapseSideMenu ? "collapse" : "") onclick=@ToggleSideMenu >
+        <ul class="nav flex-column">
+            <li class="nav-item-side px-3">
+                <NavLink class="nav-link" href="" Match=NavLinkMatch.All>
+                    <span class="oi oi-home" aria-hidden="true"></span> Home
+                </NavLink>
+            </li>
+            <li class="nav-item-side px-3">
+                <NavLink class="nav-link" href="counter">
+                    <span class="oi oi-plus" aria-hidden="true"></span> Counter
+                </NavLink>
+            </li>
+            <li class="nav-item-side px-3">
+                <NavLink class="nav-link" href="fetchdata">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+                </NavLink>
+            </li>
 
-<div class=@(collapseSideMenu ? "collapse" : null) onclick=@ToggleSideMenu>
-    <ul class="nav flex-column">
-        <li class="nav-item-side px-3">
-            <NavLink class="nav-link" href="" Match=NavLinkMatch.All>
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </NavLink>
-        </li>
-        <li class="nav-item-side px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="oi oi-plus" aria-hidden="true"></span> Counter
-            </NavLink>
-        </li>
-        <li class="nav-item-side px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
-            </NavLink>
-        </li>
+        </ul>
+    </div>
+</nav>
 
-    </ul>
-</div>
 
 @functions {
-    bool collapseSideMenu = true;
+    [Parameter]
+    private bool SlideIn { get; set; } = false;
+
+    [Parameter]
+    private bool CollapseSideMenu { get; set; } = true;
 
     void ToggleSideMenu()
     {
-        collapseSideMenu = !collapseSideMenu;
+        CollapseSideMenu = !CollapseSideMenu;
     }
 
     //bool collapseNavMenu = true;
@@ -50,7 +51,16 @@
     {
         //collapseNavMenu = !collapseNavMenu;
         BlazorDashboard.XSingleton.NavBarDisplay = !BlazorDashboard.XSingleton.NavBarDisplay;
-        StateHasChanged();
+        //StateHasChanged();
+        ToggleNavMenuChanged();
     }
 
+    [Parameter]
+    Action ToggleNavMenuChanged { get; set; }
+
+
+    public async static Task LaunchSideBar()
+    {
+        await JSRuntime.Current.InvokeAsync<bool>("LaunchSideBar");
+    }
 }

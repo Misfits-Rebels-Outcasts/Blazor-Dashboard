@@ -113,14 +113,17 @@
             </div>
         </div>
         <!-- card -->
-        <div class="card">
-            <img class="card-img-top img-fluid" alt="Card image cap" src="images/floral-pattern-background-1167.jpg">
-            <div class="card-body">
-                <h4 class="card-title">Roadmap</h4>
-                <p class="card-text" style="font-weight:300">Lorem Ipsum is simply dummy text of the printing and typesetting industry scrambled it to make text of the printing and typesetting industry scrambled a type specimen book text of the dummy text of the printing printing and typesetting industry scrambled dummy text of the printing. </p>
 
+            <div class="card">
+                <img class="card-img-top img-fluid" alt="Card image cap" src="images/floral-pattern-background-1167.jpg">
+                <div class="card-body">
+                    <h4 class="card-title">Roadmap</h4>
+                    <p class="card-text" style="font-weight:300">Lorem Ipsum is simply dummy text of the printing and typesetting industry scrambled it to make text of the printing and typesetting industry scrambled a type specimen book text of the dummy text of the printing printing and typesetting industry scrambled dummy text of the printing. </p>
+
+                </div>
             </div>
-        </div>
+
+
     </div>
     <hr />
     <div class="row">
@@ -131,3 +134,13 @@
         </div>
     </div>
 </div>
+
+@functions {
+private int Counter = 1;
+
+void ChildFiredEvent(int counter)
+{
+    Counter = counter;
+    StateHasChanged();
+}
+}
