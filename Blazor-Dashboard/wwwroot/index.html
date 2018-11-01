@@ -28,7 +28,10 @@
     <script src="_framework/blazor.webassembly.js"></script>
     <script>
         var stopEvents = new Boolean("false");
-
+        function init() {
+            stopEvents = false;
+        }
+        window.onload = init;
         function LaunchSideBar() {
             if (stopEvents)
                 return;

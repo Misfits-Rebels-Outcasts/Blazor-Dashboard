@@ -176,7 +176,7 @@ app {
         display: none;
     }
     .main .top-row {
-        top: 50px;
+        top: 0px;
         /*shift 50 downwards*/
     }
     /*

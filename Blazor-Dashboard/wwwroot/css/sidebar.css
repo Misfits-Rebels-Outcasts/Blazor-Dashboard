@@ -9,9 +9,9 @@ body,
 .sidebar-main-container {
     position: relative;
     z-index:1;
-    /*
+    
     overflow: hidden;
-    */
+    
     display: flex;
     flex-direction: row;
 }
