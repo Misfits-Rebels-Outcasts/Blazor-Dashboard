@@ -1,129 +1,187 @@
-﻿@addTagHelper *, DoughnutChartComponent
+﻿@addTagHelper *, PieChartComponent
+@addTagHelper *, DoughnutChartComponent
 @using DoughnutChartComponent;
+@using PieChartComponent;
 
 @page "/"
 @page "/dashboard1"
 
 
-<div class="jumbotron">
+<div class="jumbotron" style="background:white;margin-left:16px;margin-right:16px">
     <div class="container-fluid">
         <h1>Admin Dashboard</h1>
-        <p>This is an ultra lightweight admin dashboard based in Blazor. We are experimenting this in our ASP.NET project. The aim is to use Blazor, CSS, CSS Grid and Bootsrap for front end development with the design philosophy of keeping the components modern and lightweight with minimal dependencies. We strongly believe that less dependencies means easier of upgrade. On the other hand, if Blazor or Bootstrap introduces new components that overlap with those in this project, the idea is to let the components in Blazor and Boostrap take precedence. This template is available under the MIT License, so feel free play with it.</p>
+        <p>This is an ultra lightweight admin dashboard based in Blazor. We are experimenting this in our ASP.NET project. The aim is to use Blazor, CSS, CSS Grid and Bootsrap for front end development with the design philosophy of keeping the components modern and lightweight with minimal dependencies. We strongly believe that less dependencies means easier of upgrade. On the other hand, if Blazor or Bootstrap introduces new components that overlap with those in this project, the idea is to let the components in Blazor and Boostrap take precedence. This template is available under the MIT License, so feel free to play with it.</p>
     </div>
 </div>
 
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-xl-4">
-            <h2>Blazor</h2>
-            <p>Blazor is an experimental .NET web framework using C# and HTML that runs in the browser. Blazor, together with Mono, compiles your Web UI and C# to WebAssembly.</p>
-            <p><a href="https://blazor.net" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
-        </div>
-        <div class="col-xl-4">
-            <h2>CSS Grid</h2>
-            <p>The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.</p>
-            <p><a href="https://www.w3.org/TR/css-grid-1/" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
-        </div>
-        <div class="col-xl-4">
-            <h2>Bootstrap 4</h2>
-            <p>Bootstrap is a free and open-source front-end framework for designing websites and web applications. It contains design templates for typography, forms, buttons and navigation.</p>
-            <p><a href="https://getbootstrap.com/" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
-        </div>
+    <div class="card-deck">
+            <div class="card">
+                <div class="card-header">Blazor</div>
+                <div class="card-body">
+                    <p class="card-text">Blazor is an experimental .NET web framework using C# and HTML that runs in the browser. Blazor, together with Mono, compiles your Web UI and C# to WebAssembly.</p>
+                    <p><a href="https://blazor.net" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">CSS Grid</div>
+                <div class="card-body">
+                    <p class="card-text">The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.</p>
+                    <p><a href="https://www.w3.org/TR/css-grid-1/" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">Bootstrap 4</div>
+                <div class="card-body">
+                    <p class="card-text">Bootstrap is a free and open-source front-end framework for designing websites and web applications. It contains design templates for typography, forms, buttons and navigation.</p>
+                    <p><a href="https://getbootstrap.com/" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
+                </div>
+            </div>
     </div>
-    <hr>
-    <div class="row">
-        <div class="col-xl-4">
-            <h2>Doughnut Chart</h2>
-            <DoughnutChart></DoughnutChart>
-        </div>
-        <div class="col-xl-4">
-            <h2>Pie Chart</h2>
-            <Component1></Component1>
-        </div>
-        <div class="col-xl-4">
-            <h2>Line Chart</h2>
-            <Component1></Component1>
-        </div>
-    </div>
-    <hr>
-    <div class="row">
-        <div class="col-xl-4">
-            <h2>Area Chart</h2>
-            <Component1></Component1>
-        </div>
-        <div class="col-xl-4">
-            <h2>Bar Chart</h2>
-            <Component1></Component1>
-        </div>
-        <div class="col-xl-4">
-            <h2>Bullet Bars</h2>
-            <Component1></Component1>
-        </div>
-    </div>
-    <hr>
-    <div class="card-columns">
-        <div class="card bg-primary">
-            <div class="card-body text-center">
-                <p class="card-text">Info card</p>
+    <hr />
+    <div class="card-deck">
+        <div class="card">
+            <div class="card-header">Doughtnut Chart</div>
+            <div class="card-body">
+                <h5 class="card-title">By Channels</h5>
+                <DoughnutChart></DoughnutChart>
+                <a href="#" class="btn btn-primary">Details</a>
             </div>
         </div>
-        <div class="card bg-warning">
-            <div class="card-body text-center">
-                <p class="card-text">Info card</p>
+        <div class="card">
+            <div class="card-header">Pie Chart</div>
+            <div class="card-body">
+                <h5 class="card-title">By Channels</h5>
+                <PieChart></PieChart>
+                <a href="#" class="btn btn-primary">Details</a>
             </div>
         </div>
-        <div class="card bg-success">
-            <div class="card-body text-center">
-                <p class="card-text">Info card</p>
-            </div>
-        </div>
-        <div class="card bg-danger">
-            <div class="card-body text-center">
-                <p class="card-text">Info card</p>
-            </div>
-        </div>
-        <div class="card bg-light">
-            <div class="card-body text-center">
-                <p class="card-text">Info card</p>
-            </div>
-        </div>
-        <div class="card bg-info">
-            <div class="card-body text-center">
-                <p class="card-text">Info card</p>
+        <div class="card">
+            <div class="card-header">No Chart</div>
+            <div class="card-body">
+                <h5 class="card-title"></h5>
             </div>
         </div>
     </div>
     <hr />
-
-    <div class="card-group">
-        <!-- card -->
+    <div class="card-deck">
         <div class="card">
-            <img class="card-img-top img-fluid" alt="Card image cap" src="images/floral-pattern-background-569.jpg">
+            <div class="card-header">Area Chart</div>
             <div class="card-body">
-                <h4 class="card-title">New Features</h4>
-                <p class="card-text" style="font-weight:300">Resize the browser to the size of a mobile phone to test the Responsive Slide In SideBar.</p>
+                <h5 class="card-title">By Channels</h5>
+                <Component1></Component1>
+                <a href="#" class="btn btn-primary">Details</a>
             </div>
         </div>
-        <!-- card -->
         <div class="card">
-            <img class="card-img-top img-fluid" alt="Card image cap" src="images/wallpaper-110.jpg">
+            <div class="card-header">Bar Chart</div>
             <div class="card-body">
-                <h4 class="card-title">Todo</h4>
-                <p class="card-text" style="font-weight:300">Todo: 1. Improve the Javascript-Blazor Integration. 2. Simplify the Top Bar toggling. 3. Investigate SVG Pie Chart and Line Chart. 4. Test in other browsers besides Microsoft Edge.</p>
+                <h5 class="card-title">By Channels</h5>
+                <Component1></Component1>
+                <a href="#" class="btn btn-primary">Details</a>
             </div>
         </div>
-        <!-- card -->
-
+        <div class="card">
             <div class="card">
-                <img class="card-img-top img-fluid" alt="Card image cap" src="images/floral-pattern-background-1167.jpg">
+                <div class="card-header">Line Chart</div>
                 <div class="card-body">
-                    <h4 class="card-title">Roadmap</h4>
-                    <p class="card-text" style="font-weight:300">Lorem Ipsum is simply dummy text of the printing and typesetting industry scrambled it to make text of the printing and typesetting industry scrambled a type specimen book text of the dummy text of the printing printing and typesetting industry scrambled dummy text of the printing. </p>
-
+                    <h5 class="card-title">By Channels</h5>
+                    <Component1></Component1>
+                    <a href="#" class="btn btn-primary">Details</a>
                 </div>
             </div>
+        </div>
+    </div>
+    <hr />
+    <div class="card-deck">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="card-columns">
+        <div class="card">
+            <img class="card-img-top" src="/images/283160.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Card title that wraps to a new line</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+        </div>
+        <div class="card p-3">
+            <blockquote class="blockquote mb-0 card-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                <footer class="blockquote-footer">
+                    <small class="text-muted">
+                        Someone famous in <cite title="Source Title">Source Title</cite>
+                    </small>
+                </footer>
+            </blockquote>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="/images/283260.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+        <div class="card bg-primary text-white text-center p-3">
+            <blockquote class="blockquote mb-0">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+                <footer class="blockquote-footer">
+                    <small>
+                        Someone famous in <cite title="Source Title">Source Title</cite>
+                    </small>
+                </footer>
+            </blockquote>
+        </div>
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img" src="/images/283160.png" alt="Card image">
+        </div>
+        <div class="card p-3 text-right">
+            <blockquote class="blockquote mb-0">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
 
-
+            </blockquote>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
     </div>
     <hr />
     <div class="row">
@@ -135,12 +193,12 @@
     </div>
 </div>
 
-@functions {
-private int Counter = 1;
+    @functions {
+    private int Counter = 1;
 
-void ChildFiredEvent(int counter)
-{
-    Counter = counter;
-    StateHasChanged();
-}
-}
+    void ChildFiredEvent(int counter)
+    {
+        Counter = counter;
+        StateHasChanged();
+    }
+    }

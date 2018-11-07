@@ -6,12 +6,17 @@ body,
 	height: 100%;
 }
 
+.big-main-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
 .sidebar-main-container {
     position: relative;
-    z-index:1;
-    
+    z-index: 1;
     overflow: hidden;
-    
     display: flex;
     flex-direction: row;
 }

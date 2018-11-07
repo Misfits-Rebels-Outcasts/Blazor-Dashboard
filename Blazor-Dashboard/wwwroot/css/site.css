@@ -20,6 +20,72 @@ app {
 
 }
 
+.top-rowx {
+    height: 3.5rem;
+}
+
+.top-rowx {
+    background-color: #F8F9FB;
+    border-bottom: 1px solid #d6d5d5;
+    z-index: 2;
+    display: block;
+    position: sticky;
+    top: 0;
+}
+
+    .top-rowx .navbar {
+        height: 3.5rem;
+        border-bottom: 1px solid #d6d5d5;
+    }
+
+        .top-rowx .navbar .navbar-collapse .navbar-nav .action {
+            vertical-align: middle;
+        }
+
+        .top-rowx .navbar .navbar-collapse .navbar-nav .nav-item .bell {
+            vertical-align: middle;
+            margin-top: 8px
+        }
+
+        .top-rowx .navbar .navbar-nav .nav-item .flag {
+            vertical-align: middle;
+            margin-top: 2px
+        }
+
+        .top-rowx .navbar .navbar-nav .nav-item .user {
+            vertical-align: middle
+        }
+
+.top-rowx-blank {
+    background-color: #F8F9FB;
+    border-bottom: 1px solid #d6d5d5;
+    z-index: 2;
+    display: none;
+    position: sticky;
+    top: 0;
+}
+
+    .top-rowx-blank .navbar {
+        height: 3.5rem;
+        border-bottom: 1px solid #d6d5d5;
+    }
+
+        .top-rowx-blank .navbar .navbar-collapse .navbar-nav .nav-item .bell {
+            vertical-align: middle;
+            margin-top: 8px
+        }
+
+        .top-rowx-blank .navbar .navbar-nav .nav-item .flag {
+            vertical-align: middle;
+            margin-top: 2px
+        }
+
+        .top-rowx-blank .navbar .navbar-nav .nav-item .user {
+            vertical-align: middle
+        }
+
+
+
 .main {
     flex: 1;
 }
@@ -179,6 +245,17 @@ app {
         top: 0px;
         /*shift 50 downwards*/
     }
+
+    .top-rowx-blank {
+        display: none;
+    }
+
+    .top-rowx {
+        top: 50px;
+        /*display: none*/
+        /*shift 50 downwards*/
+    }
+
     /*
 
     .main .top-row-blank {
@@ -200,6 +277,10 @@ app {
     }
 
     .main .top-row-blank {
+        display: block; /*always display whether the top bar hidden or not when large window*/
+    }
+
+    .top-rowx-blank {
         display: block; /*always display whether the top bar hidden or not when large window*/
     }
 

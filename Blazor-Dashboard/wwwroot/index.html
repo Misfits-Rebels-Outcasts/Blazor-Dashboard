@@ -33,16 +33,24 @@
         }
         window.onload = init;
         function LaunchSideBar() {
+
             if (stopEvents)
                 return;
             ev = window.event;
             ev.stopPropagation();
-            ev.preventDefault();   
+            ev.preventDefault();
             //document.getElementById('sidebar-main-container').style.zIndex = "3";
-            document.getElementById('nav-menu').style.marginTop = (window.scrollY-5) + "px";
+            document.getElementById('nav-menu').style.marginTop = (window.scrollY - 5) + "px";
             var container = document.getElementById('sidebar-main-container');
             container.className = 'sidebar-main-container';
             container.classList.add('sidebar-nav-open');
+            /*
+            if (document.getElementById('top-bar').classList.contains('top-rowx')) {
+                document.getElementById('top-bar').classList.remove('top-rowx');
+                document.getElementById('top-bar').classList.add('top-rowx-blank');
+            }
+            */
+
             setTimeout(function () {
                 document.addEventListener('click', HideSideBar);
             }, 25);
@@ -50,17 +58,24 @@
         }
 
         function HideSideBar() {
+        
             ev = window.event;
             ev.stopPropagation();
             ev.preventDefault();
             //document.getElementById('sidebar-main-container').style.zIndex = "1";
             document.getElementById('sidebar-main-container').classList.remove('sidebar-nav-open');
             document.removeEventListener('click', HideSideBar);
+            //DotNet.invokeMethodAsync('Blazor-Dashboard', 'RestoreTopBar').then(data => alert(data));
+            /*
+            document.getElementById('top-bar').classList.remove('top-rowx-blank');
+            document.getElementById('top-bar').classList.add('top-rowx');
+            */
             stopEvents = false;
         }
 
         window.onresize = function (event) {
             HideSideBar();
+
         };
 
         window.onscroll = function () { scrollSlideInSideBar() };
