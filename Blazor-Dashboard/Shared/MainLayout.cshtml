@@ -1,14 +1,17 @@
 @inherits BlazorLayoutComponent
 
-<div class="sidebar">
+<div class="sidebar" style="overflow:auto">
     <!--SideTopBar-->
     <NavMenu ToggleNavMenuChanged="Redraw" />
 
 </div>
-<div class="big-main-container">
+<div class="big-main-container" style="width:100%">
     <!--TopBar-->
+    <!--
+    <div id="top-bar" class=(BlazorDashboard.XSingleton.NavBarDisplay ? "top-rowx" : "top-rowx-blank")>
 
-    <div id="top-bar" class=@(BlazorDashboard.XSingleton.NavBarDisplay ? "top-rowx" : "top-rowx-blank")>
+    -->
+    <div id="top-bar" class=@(BlazorDashboard.XSingleton.NavBarDisplay ? "top-rowx" : "top-rowx-blank" )>
         <nav id="nav-menux" class="navbar navbar-expand navbar-light bg-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -58,7 +61,7 @@
 
     </div>
 
-    <div id="sidebar-main-container" class="sidebar-main-container" style="background:#e9ecef;">
+    <div id="sidebar-main-container" class="sidebar-main-container" style="background:#e9ecef">
         <!--
             style="background:#e9ecef;"
         <div class="slidesidebar">
@@ -66,34 +69,75 @@
         </div>
             -->
         <!--SlideInSideBar-->
-
         <nav id="nav-menu" class="sidebar-nav ind" style="margin-top:-6px">
             <div class="top-row pl-4 navbar navbar-dark">
                 <a class="navbar-brand" href="">BLAZOR DASHBOARD</a>
             </div>
-            <div class="">
+            <div id="inner-nav-menu" class="" style="overflow:auto">
                 <ul class="nav flex-column">
                     <li class="nav-item-side px-3">
                         <NavLink class="nav-link" href="" Match=NavLinkMatch.All>
                             <span class="oi oi-home" aria-hidden="true"></span> Home
                         </NavLink>
                     </li>
+
+                    <li class="nav-item-side px-3">
+                        <NavLink class="nav-link" href="counter">
+                            <span class="oi oi-plus" aria-hidden="true"></span> Counter
+                        </NavLink>
+                    </li>
+                    <li class="nav-item-side px-3">
+                        <NavLink class="nav-link" href="fetchdata">
+                            <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+                        </NavLink>
+                    </li>
                     <!--
 
     <li class="nav-item-side px-3">
-        <NavLink class="nav-link" href="counter">
-            <span class="oi oi-plus" aria-hidden="true"></span> Counter
+        <NavLink class="nav-link" href="fetchdata">
+            <span class="oi oi-list-rich" aria-hidden="true"></span> Counter
         </NavLink>
+        <ul style="display:block">
+            <li style="color:white">
+                Submenu 1
+            </li>
+            <li style="color:white">
+                Submenu 2
+            </li>
+        </ul>
     </li>
     <li class="nav-item-side px-3">
         <NavLink class="nav-link" href="fetchdata">
-            <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+            <span class="oi oi-list-rich" aria-hidden="true"></span> Counter
         </NavLink>
+        <ul style="display:block">
+            <li style="color:white">
+                Submenu 1
+            </li>
+            <li style="color:white">
+                Submenu 2
+            </li>
+        </ul>
     </li>
-    -->
+    <li class="nav-item-side px-3">
+        <NavLink class="nav-link" href="fetchdata">
+            <span class="oi oi-list-rich" aria-hidden="true"></span> Counter
+        </NavLink>
+        <ul style="display:block">
+            <li style="color:white">
+                Submenu 1
+            </li>
+            <li style="color:white">
+                Submenu 2
+            </li>
+        </ul>
+    </li>
+        -->
+
                 </ul>
             </div>
         </nav>
+
 
         <div class="main sidebar-cover">
 

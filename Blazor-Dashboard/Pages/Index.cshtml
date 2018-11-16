@@ -1,11 +1,17 @@
 ﻿@addTagHelper *, PieChartComponent
 @addTagHelper *, DoughnutChartComponent
+@addTagHelper *, LineChartComponent
+@addTagHelper *, VerticalBarChartComponent
+@addTagHelper *, HorizontalBarChartComponent
+
 @using DoughnutChartComponent;
 @using PieChartComponent;
+@using LineChartComponent;
+@using VerticalBarChartComponent;
+@using HorizontalBarChartComponent;
 
 @page "/"
 @page "/dashboard1"
-
 
 <div class="jumbotron" style="background:white;margin-left:16px;margin-right:16px">
     <div class="container-fluid">
@@ -16,27 +22,27 @@
 
 <div class="container-fluid">
     <div class="card-deck">
-            <div class="card">
-                <div class="card-header">Blazor</div>
-                <div class="card-body">
-                    <p class="card-text">Blazor is an experimental .NET web framework using C# and HTML that runs in the browser. Blazor, together with Mono, compiles your Web UI and C# to WebAssembly.</p>
-                    <p><a href="https://blazor.net" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
-                </div>
+        <div class="card">
+            <div class="card-header">Blazor</div>
+            <div class="card-body">
+                <p class="card-text">Blazor is an experimental .NET web framework using C# and HTML that runs in the browser. Blazor, together with Mono, compiles your Web UI and C# to WebAssembly.</p>
+                <p><a href="https://blazor.net" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
             </div>
-            <div class="card">
-                <div class="card-header">CSS Grid</div>
-                <div class="card-body">
-                    <p class="card-text">The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.</p>
-                    <p><a href="https://www.w3.org/TR/css-grid-1/" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
-                </div>
+        </div>
+        <div class="card">
+            <div class="card-header">CSS Grid</div>
+            <div class="card-body">
+                <p class="card-text">The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.</p>
+                <p><a href="https://www.w3.org/TR/css-grid-1/" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
             </div>
-            <div class="card">
-                <div class="card-header">Bootstrap 4</div>
-                <div class="card-body">
-                    <p class="card-text">Bootstrap is a free and open-source front-end framework for designing websites and web applications. It contains design templates for typography, forms, buttons and navigation.</p>
-                    <p><a href="https://getbootstrap.com/" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
-                </div>
+        </div>
+        <div class="card">
+            <div class="card-header">Bootstrap 4</div>
+            <div class="card-body">
+                <p class="card-text">Bootstrap is a free and open-source front-end framework for designing websites and web applications. It contains design templates for typography, forms, buttons and navigation.</p>
+                <p><a href="https://getbootstrap.com/" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
             </div>
+        </div>
     </div>
     <hr />
     <div class="card-deck">
@@ -59,36 +65,33 @@
         <div class="card">
             <div class="card-header">No Chart</div>
             <div class="card-body">
-                <h5 class="card-title"></h5>
             </div>
         </div>
     </div>
     <hr />
     <div class="card-deck">
         <div class="card">
-            <div class="card-header">Area Chart</div>
+            <div class="card-header">Bar Chart Horizontal</div>
             <div class="card-body">
-                <h5 class="card-title">By Channels</h5>
-                <Component1></Component1>
+                <h5 class="card-title">By Gender</h5>
+                <HorizontalBarChart></HorizontalBarChart>
                 <a href="#" class="btn btn-primary">Details</a>
             </div>
         </div>
         <div class="card">
-            <div class="card-header">Bar Chart</div>
+            <div class="card-header">Bar Chart Vertical</div>
             <div class="card-body">
-                <h5 class="card-title">By Channels</h5>
-                <Component1></Component1>
+                <h5 class="card-title">By Gender</h5>
+                <VerticalBarChart></VerticalBarChart>
                 <a href="#" class="btn btn-primary">Details</a>
             </div>
         </div>
         <div class="card">
-            <div class="card">
-                <div class="card-header">Line Chart</div>
-                <div class="card-body">
-                    <h5 class="card-title">By Channels</h5>
-                    <Component1></Component1>
-                    <a href="#" class="btn btn-primary">Details</a>
-                </div>
+            <div class="card-header">Line Chart</div>
+            <div class="card-body">
+                <h5 class="card-title">By Gender</h5>
+                <LineChart></LineChart>
+                <a href="#" class="btn btn-primary">Details</a>
             </div>
         </div>
     </div>
@@ -193,12 +196,15 @@
     </div>
 </div>
 
-    @functions {
-    private int Counter = 1;
+@functions {
 
-    void ChildFiredEvent(int counter)
-    {
-        Counter = counter;
-        StateHasChanged();
-    }
+
+
+        private int Counter = 1;
+
+        void ChildFiredEvent(int counter)
+        {
+            Counter = counter;
+            StateHasChanged();
+        }
     }
