@@ -1,16 +1,18 @@
 @inherits BlazorLayoutComponent
+@using Shapes
 
 <div class="sidebar" style="overflow:auto">
     <!--SideTopBar-->
-    <NavMenu ToggleNavMenuChanged="Redraw" />
+    <NavMenu ToggleNavMenuChanged="Redraw" SlideInSideBarTriggered="LaunchSlideInSideBar" />
 
 </div>
 <div class="big-main-container" style="width:100%">
     <!--TopBar-->
     <!--
-    <div id="top-bar" class=(BlazorDashboard.XSingleton.NavBarDisplay ? "top-rowx" : "top-rowx-blank")>
+    <div class="big-main-container" style="width:100%" onclick=HideSlideInSideBar>
+        <div id="top-bar" class=(BlazorDashboard.XSingleton.NavBarDisplay ? "top-rowx" : "top-rowx-blank")>
 
-    -->
+        -->
     <div id="top-bar" class=@(BlazorDashboard.XSingleton.NavBarDisplay ? "top-rowx" : "top-rowx-blank" )>
         <nav id="nav-menux" class="navbar navbar-expand navbar-light bg-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
@@ -61,8 +63,9 @@
 
     </div>
 
-    <div id="sidebar-main-container" class="sidebar-main-container" style="background:#e9ecef">
+    <div id="sidebar-main-container" class=@navstring style="background:#e9ecef">
         <!--
+        <div id="sidebar-main-container" class=navstring style="background:#e9ecef">
             style="background:#e9ecef;"
         <div class="slidesidebar">
             <NavMenu SlideIn="true" CollapseSideMenu="false" />
@@ -93,73 +96,98 @@
                     </li>
                     <!--
 
-    <li class="nav-item-side px-3">
-        <NavLink class="nav-link" href="fetchdata">
-            <span class="oi oi-list-rich" aria-hidden="true"></span> Counter
-        </NavLink>
-        <ul style="display:block">
-            <li style="color:white">
-                Submenu 1
-            </li>
-            <li style="color:white">
-                Submenu 2
-            </li>
-        </ul>
-    </li>
-    <li class="nav-item-side px-3">
-        <NavLink class="nav-link" href="fetchdata">
-            <span class="oi oi-list-rich" aria-hidden="true"></span> Counter
-        </NavLink>
-        <ul style="display:block">
-            <li style="color:white">
-                Submenu 1
-            </li>
-            <li style="color:white">
-                Submenu 2
-            </li>
-        </ul>
-    </li>
-    <li class="nav-item-side px-3">
-        <NavLink class="nav-link" href="fetchdata">
-            <span class="oi oi-list-rich" aria-hidden="true"></span> Counter
-        </NavLink>
-        <ul style="display:block">
-            <li style="color:white">
-                Submenu 1
-            </li>
-            <li style="color:white">
-                Submenu 2
-            </li>
-        </ul>
-    </li>
-        -->
+                    <li class="nav-item-side px-3">
+                        <NavLink class="nav-link" href="fetchdata">
+                            <span class="oi oi-list-rich" aria-hidden="true"></span> Counter
+                        </NavLink>
+                        <ul style="display:block">
+                            <li style="color:white">
+                                Submenu 1
+                            </li>
+                            <li style="color:white">
+                                Submenu 2
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item-side px-3">
+                        <NavLink class="nav-link" href="fetchdata">
+                            <span class="oi oi-list-rich" aria-hidden="true"></span> Counter
+                        </NavLink>
+                        <ul style="display:block">
+                            <li style="color:white">
+                                Submenu 1
+                            </li>
+                            <li style="color:white">
+                                Submenu 2
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item-side px-3">
+                        <NavLink class="nav-link" href="fetchdata">
+                            <span class="oi oi-list-rich" aria-hidden="true"></span> Counter
+                        </NavLink>
+                        <ul style="display:block">
+                            <li style="color:white">
+                                Submenu 1
+                            </li>
+                            <li style="color:white">
+                                Submenu 2
+                            </li>
+                        </ul>
+                    </li>
+                        -->
 
                 </ul>
             </div>
         </nav>
 
 
-        <div class="main sidebar-cover">
-
-            <div class="content px-4">
-                @Body
-            </div>
+        <div class="main sidebar-cover" onclick=@HideSlideInSideBar>
+                <div class="content px-4">
+                    @Body
+                </div>
         </div>
 
     </div>
 </div>
 
 
-
 @functions {
+
+    //Rectangle rect= new Rectangle { Width=5.0,Height=5.0};
     
+    //string TitleValue="Hello Title";
+
+    bool slideIn=false;
+    string navstring="sidebar-main-container";
     public async static Task SayHello()
     {
-        await JSRuntime.Current.InvokeAsync<bool>("SayHello");
+        await JSRuntime.Current.InvokeAsync<bool>
+    ("SayHello");
     }
 
     void Redraw()
-    {        
-        StateHasChanged();
+    {
+    StateHasChanged();
     }
-}
+
+    void LaunchSlideInSideBar()
+    {
+    //StateHasChanged();
+    Console.WriteLine("LaunchSlideInSideBar");
+    navstring="sidebar-main-container sidebar-nav-open";
+    slideIn=true;
+    }
+    void HideSlideInSideBar()
+    {
+    //StateHasChanged();
+    //watch for #1073 preventDefault
+    Console.WriteLine("HideSlideInSideBar");
+    if (slideIn)
+    {
+    navstring="sidebar-main-container";
+    slideIn=false;
+    }
+    }
+
+    }

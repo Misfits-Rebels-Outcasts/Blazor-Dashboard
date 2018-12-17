@@ -9,6 +9,7 @@
 @using LineChartComponent;
 @using VerticalBarChartComponent;
 @using HorizontalBarChartComponent;
+@using Shapes
 
 @page "/"
 @page "/dashboard1"
@@ -63,8 +64,24 @@
             </div>
         </div>
         <div class="card">
-            <div class="card-header">No Chart</div>
+            <div class="card-header">Doughnut Chart</div>
+            <!--
+                    <div class="card-body">
+                    </div>
+            -->
             <div class="card-body">
+                <h5 class="card-title">RenderTreeBuilder</h5>
+                <DoughnutChartMan></DoughnutChartMan>
+                <!--
+                <p>
+                Width:rectParam.Width
+                </p>
+                <h5 class="card-title">Using RenderTreeBuilder</h5>
+                    <p><button class="btn ThemeInfo.XButtonClass">Increment Counter (Themed)</button></p>
+
+                -->
+
+                <a href="#" class="btn btn-primary">Details</a>
             </div>
         </div>
     </div>
@@ -199,6 +216,9 @@
 @functions {
 
 
+        //[CascadingParameter (Name = "UserPermissions")] protected ThemeInfo ThemeInfo { get; set; }
+        //[CascadingParameter (Name = "TitleValue")] protected string Title { get; set; }
+        //[CascadingParameter (Name = "RectangleValue")] protected Rectangle rectParam { get; set; }
 
         private int Counter = 1;
 

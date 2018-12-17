@@ -1,16 +1,25 @@
 ﻿<nav class=@(SlideIn ? "sidebar-nav" : "")>
-    <div class="top-row pl-4 navbar navbar-dark" >
+    <div class="top-row pl-4 navbar navbar-dark">
         <a class="navbar-brand" href="">BLAZOR DASHBOARD</a>
         <div style=@(SlideIn ? "visibility:hidden" : "visibility:visible")>
             <button class="navbar-toggler" onclick=@LaunchSideBar>
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <button class="navbar-toggler" style="padding-top:2.2px" onclick=@ToggleNavMenu>
-                <span class="oi oi-excerpt" aria-hidden="true" style="font-size:1.10em;width:1.3em;height:1.45em;padding-top:7px;font-weight:200"></span>
+            <button class="navbar-toggler" style="padding-top:-0.01px" onclick=@ToggleNavMenu>
+                <span class="oi oi-excerpt" aria-hidden="true" style="font-size:1.10em;width:1.3em;height:1.37em;padding-top:7px;font-weight:200"></span>
             </button>
+
+            <!--
+    <button class="navbar-toggler" style="padding-top:2.2px" onclick=ToggleNavMenu>
+        <span class="oi oi-excerpt" aria-hidden="true" style="font-size:1.10em;width:1.3em;height:1.45em;padding-top:7px;font-weight:200"></span>
+    </button>
+    <button class="navbar-toggler" style="padding-top:-0.009px" onclick=ToggleNavMenu>
+        <span class="oi oi-excerpt" aria-hidden="true" style="font-size:1.10em;width:1.3em;height:1.36em;padding-top:7px;font-weight:200"></span>
+    </button>
+    -->
         </div>
     </div>
-    <div class=@(CollapseSideMenu ? "collapse" : "") onclick=@ToggleSideMenu >
+    <div class=@(CollapseSideMenu ? "collapse" : "") onclick=@ToggleSideMenu>
         <ul class="nav flex-column">
             <li class="nav-item-side px-3">
                 <NavLink class="nav-link" href="" Match=NavLinkMatch.All>
@@ -28,22 +37,27 @@
                     <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
                 </NavLink>
             </li>
+            <li class="nav-item-side px-3">
+                <NavLink class="nav-link" href="classrender">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> Class Render
+                </NavLink>
+            </li>
             <!--
 
-    <li class="nav-item-side px-3">
-        <NavLink class="nav-link" href="fetchdata">
-            <span class="oi oi-list-rich" aria-hidden="true"></span> Counter
-        </NavLink>
-        <ul style="display:block">
-            <li style="color:white">
-                Submenu 1
+            <li class="nav-item-side px-3">
+                <NavLink class="nav-link" href="fetchdata">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> Counter
+                </NavLink>
+                <ul style="display:block">
+                    <li style="color:white">
+                        Submenu 1
+                    </li>
+                    <li style="color:white">
+                        Submenu 2
+                    </li>
+                </ul>
             </li>
-            <li style="color:white">
-                Submenu 2
-            </li>
-        </ul>
-    </li>
-    -->
+            -->
 
         </ul>
     </div>
@@ -75,12 +89,17 @@
     [Parameter]
     Action ToggleNavMenuChanged { get; set; }
 
+    [Parameter]
+    Action SlideInSideBarTriggered { get; set; }
 
     public async Task LaunchSideBar()
     {
         BlazorDashboard.XSingleton.NavBarDisplay = false;
         ToggleNavMenuChanged();
-        await JSRuntime.Current.InvokeAsync<bool>("LaunchSideBar");
+        //deprecated
+        //await JSRuntime.Current.InvokeAsync<bool>("LaunchSideBar");
+
+        SlideInSideBarTriggered();
     }
 
     [JSInvokable]
@@ -89,18 +108,18 @@
     [JSInvokable]
     public static void RestoreTopBar()
     {
-        BlazorDashboard.XSingleton.NavBarDisplay = false;
+    BlazorDashboard.XSingleton.NavBarDisplay = false;
     }
 
     [JSInvokable]
     public static void HideTopBar()
     {
-        BlazorDashboard.XSingleton.NavBarDisplay = false;
+    BlazorDashboard.XSingleton.NavBarDisplay = false;
     }
     [JSInvokable]
     public static void ShowTopBar()
     {
-        BlazorDashboard.XSingleton.NavBarDisplay = true;
+    BlazorDashboard.XSingleton.NavBarDisplay = true;
     }
 
-}
+    }
