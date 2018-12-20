@@ -22,8 +22,8 @@ Build the Admin Dashboard
 1. Clone or Download [Misfits-Rebels-Outcasts/Blazor-Dashboard](https://github.com/Misfits-Rebels-Outcasts/Blazor-Dashboard).
 2. Clone or Download [Misfits-Rebels-Outcasts/Blazor-Charts](https://github.com/Misfits-Rebels-Outcasts/Blazor-Charts).
 3. Launch Blazor-Dashboard.sln in Visual Studio.
-4. Add Existing Project to DoughnutChartComponent.csproj, LineChartComponent.csproj, PieChartComponent.csproj, HorizontalBarChartComponent.csproj and VerticalBarChartComponent.csproj.
-5. Right Click Dependencies and Add Reference... to DoughnutChartComponent, LineChartComponent, PieChartComponent, HorizontalBarChartComponent, VerticalBarChartComponent project.
+4. Add Existing Project to ChartMan.csproj.
+5. Right Click Dependencies and Add Reference... to ChartMan project.
 6. Rebuild and Run Blazor-Dashboard with F5 or Ctrl-F5.
 
 
