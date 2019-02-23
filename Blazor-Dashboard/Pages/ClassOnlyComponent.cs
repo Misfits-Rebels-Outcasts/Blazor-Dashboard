@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Blazor.Components;
-using Microsoft.AspNetCore.Blazor.RenderTree;
-using Microsoft.AspNetCore.Blazor.Layouts;
+﻿using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.RenderTree;
+using Microsoft.AspNetCore.Components.Layouts;
 using Blazor_Dashboard.Shared;
 using System.Threading.Tasks;
 using System;
@@ -10,7 +10,7 @@ namespace BlazorDashboard.Pages
 {
     [Route("/classrender")]
     [Layout(typeof(MainLayout))]
-    public class ClassOnlyComponent : BlazorComponent
+    public class ClassOnlyComponent : ComponentBase
     {
         protected override void BuildRenderTree(RenderTreeBuilder builder)
         {

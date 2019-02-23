@@ -41,8 +41,15 @@
         <div class="card">
             <div class="card-header">Doughtnut Chart</div>
             <div class="card-body">
+                <h5 class="card-title">Grid Rendering</h5>
+                <!--
                 <h5 class="card-title">By Channels</h5>
-                <DoughnutChart></DoughnutChart>
+        <SparklineMan InputData="[30,0,6,20,45,48,51,60,76,77,78,79,90,100,30,90,95,100,40,0,0,0],[50,70,6,20,45,8,51,60,6,77,8,79,0,10,100,10,0,50,30,0,0,0],[100,0,16,25,48,45,1,0,6,37,78,79,90,90,91,100,80,0,40,0,0,0],[60,0,16,25,48,45,1,0,6,37,78,79,90,90,91,99,80,0,40,0,0,0],[80,0,16,25,48,45,1,0,6,37,78,79,90,90,91,95,80,0,40,0,0,0]" StartColor="#ce4b99" StopColor="#377bbc" SegmentWidth="40"></SparklineMan>
+    <SparklineMan InputData="[30,0,6,20,45,48,51,60,76,77,78,79,90,100,30,90,95,100,40,0,0,0],[50,70,6,20,45,8,51,60,6,77,8,79,0,10,100,10,0,50,30,0,0,0],[100,0,16,25,48,45,1,0,6,37,78,79,90,90,91,100,80,0,40,0,0,0],[60,0,16,25,48,45,1,0,6,37,78,79,90,90,91,99,80,0,40,0,0,0]" StartColor="#ce4b99" StopColor="#377bbc" SegmentWidth="20"></SparklineMan>
+
+    -->
+                <LineChartMan InputData="34,33,33"></LineChartMan>
+
                 <a href="#" class="btn btn-primary">Details</a>
             </div>
         </div>
@@ -207,15 +214,15 @@
 @functions {
 
 
-        //[CascadingParameter (Name = "UserPermissions")] protected ThemeInfo ThemeInfo { get; set; }
-        //[CascadingParameter (Name = "TitleValue")] protected string Title { get; set; }
-        //[CascadingParameter (Name = "RectangleValue")] protected Rectangle rectParam { get; set; }
+//[CascadingParameter (Name = "UserPermissions")] protected ThemeInfo ThemeInfo { get; set; }
+//[CascadingParameter (Name = "TitleValue")] protected string Title { get; set; }
+//[CascadingParameter (Name = "RectangleValue")] protected Rectangle rectParam { get; set; }
 
-        private int Counter = 1;
+private int Counter = 1;
 
-        void ChildFiredEvent(int counter)
-        {
-            Counter = counter;
-            StateHasChanged();
-        }
-    }
+void ChildFiredEvent(int counter)
+{
+    Counter = counter;
+    StateHasChanged();
+}
+}
