@@ -6,10 +6,6 @@
     <RunArguments>blazor serve</RunArguments>
     <LangVersion>7.3</LangVersion>
   </PropertyGroup>
-
-  <ItemGroup>
-
-  </ItemGroup>
  <ItemGroup>
     <Watch Include="**\*.cshtml" />
   </ItemGroup>
