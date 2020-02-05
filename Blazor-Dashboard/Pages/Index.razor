@@ -1,0 +1,229 @@
+﻿@using WebAssemblyMan;
+
+@page "/"
+@page "/dashboard1"
+
+<div class="jumbotron" style="background:white;margin-left:16px;margin-right:16px">
+    <div class="container-fluid">
+        <h1>Admin Dashboard</h1>
+        <p>This is an ultra lightweight admin dashboard based in Blazor. We are experimenting this in our ASP.NET project. The aim is to use Blazor, CSS, CSS Grid and Bootsrap for front end development with the design philosophy of keeping the components modern and lightweight with minimal dependencies. We strongly believe that less dependencies means easier of upgrade. On the other hand, if Blazor or Bootstrap introduces new components that overlap with those in this project, the idea is to let the components in Blazor and Boostrap take precedence. This template is available under the MIT License, so feel free to play with it.</p>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="card-deck">
+        <div class="card">
+            <div class="card-header">Blazor</div>
+            <div class="card-body">
+                <p class="card-text">Blazor is an experimental .NET web framework using C# and HTML that runs in the browser. Blazor, together with Mono, compiles your Web UI and C# to WebAssembly.</p>
+                <p><a href="https://blazor.net" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">CSS Grid</div>
+            <div class="card-body">
+                <p class="card-text">The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.</p>
+                <p><a href="https://www.w3.org/TR/css-grid-1/" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">Bootstrap 4</div>
+            <div class="card-body">
+                <p class="card-text">Bootstrap is a free and open-source front-end framework for designing websites and web applications. It contains design templates for typography, forms, buttons and navigation.</p>
+                <p><a href="https://getbootstrap.com/" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="card-deck">
+        <div class="card">
+            <div class="card-header">Donut Chart</div>
+            <div class="card-body">
+                <h5 class="card-title">Grid Rendering</h5>
+                <!--
+                <h5 class="card-title">By Channels</h5>
+                <SparklineMan InputData="[30,0,6,20,45,48,51,60,76,77,78,79,90,100,30,90,95,100,40,0,0,0],[50,70,6,20,45,8,51,60,6,77,8,79,0,10,100,10,0,50,30,0,0,0],[100,0,16,25,48,45,1,0,6,37,78,79,90,90,91,100,80,0,40,0,0,0],[60,0,16,25,48,45,1,0,6,37,78,79,90,90,91,99,80,0,40,0,0,0],[80,0,16,25,48,45,1,0,6,37,78,79,90,90,91,95,80,0,40,0,0,0]" StartColor="#ce4b99" StopColor="#377bbc" SegmentWidth="40"></SparklineMan>
+                <SparklineMan InputData="[30,0,6,20,45,48,51,60,76,77,78,79,90,100,30,90,95,100,40,0,0,0],[50,70,6,20,45,8,51,60,6,77,8,79,0,10,100,10,0,50,30,0,0,0],[100,0,16,25,48,45,1,0,6,37,78,79,90,90,91,100,80,0,40,0,0,0],[60,0,16,25,48,45,1,0,6,37,78,79,90,90,91,99,80,0,40,0,0,0]" StartColor="#ce4b99" StopColor="#377bbc" SegmentWidth="20"></SparklineMan>        
+                <LineChartMan InputData="[30,70,42,50,3,55,35,22 ],[40,50,32,70,55,15,15,12],[0,10,10,10,10,20,70,70]"></LineChartMan>
+                -->
+
+                <a href="#" class="btn btn-primary">Details</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">Pie Chart</div>
+            <div class="card-body">
+                <h5 class="card-title">By Channels</h5>                
+                <PieChart InputData="34,33,33"></PieChart>
+                <a href="#" class="btn btn-primary">Details</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">Doughnut Chart</div>
+            <!--
+                    <div class="card-body">
+                    </div>
+            -->
+            <div class="card-body">
+                <h5 class="card-title">RenderTreeBuilder</h5>
+                <DonutChart InputData="50,30,20"></DonutChart>
+                <!--
+                <p>
+                Width:rectParam.Width
+                </p>
+                <h5 class="card-title">Using RenderTreeBuilder</h5>
+                    <p><button class="btn ThemeInfo.XButtonClass">Increment Counter (Themed)</button></p>
+
+                -->
+
+                <a href="#" class="btn btn-primary">Details</a>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="card-deck">
+        <div class="card">
+            <div class="card-header">Bar Chart Horizontal</div>
+            <div class="card-body">
+                <h5 class="card-title">By Gender</h5>
+                <HorizontalBarChart InputData="10,30,70,42,50,3,55,35,22,10"></HorizontalBarChart>
+                <a href="#" class="btn btn-primary">Details</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">Bar Chart Vertical</div>
+            <div class="card-body">
+                <h5 class="card-title">By Gender</h5>
+                <!--
+                <VerticalBarChartMan InputData="30,70,42,50,3,55,35,22"></VerticalBarChartMan>
+                -->
+                <a href="#" class="btn btn-primary">Details</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">Line Chart</div>
+            <div class="card-body">
+                <h5 class="card-title">By Gender</h5>
+                <!--
+                <DonutChart InputData="8.33333333,8.33333333,8.33333333,8.33333333,8.33333333,8.33333333,8.33333333,8.33333333,8.33333333,8.33333333,8.33333333,8.33333333"></DonutChart>
+                -->
+                <a href="#" class="btn btn-primary">Details</a>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="card-deck">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="card-columns">
+        <div class="card">
+            <img class="card-img-top" src="/images/283160.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Card title that wraps to a new line</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+        </div>
+        <div class="card p-3">
+            <blockquote class="blockquote mb-0 card-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                <footer class="blockquote-footer">
+                    <small class="text-muted">
+                        Someone famous in <cite title="Source Title">Source Title</cite>
+                    </small>
+                </footer>
+            </blockquote>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="/images/283260.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+        <div class="card bg-primary text-white text-center p-3">
+            <blockquote class="blockquote mb-0">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+                <footer class="blockquote-footer">
+                    <small>
+                        Someone famous in <cite title="Source Title">Source Title</cite>
+                    </small>
+                </footer>
+            </blockquote>
+        </div>
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img" src="/images/283160.png" alt="Card image">
+        </div>
+        <div class="card p-3 text-right">
+            <blockquote class="blockquote mb-0">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+
+            </blockquote>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-xs-12">
+            <footer>
+                <p>&copy; Available under MIT License.</p>
+            </footer>
+        </div>
+    </div>
+</div>
+
+@functions {
+
+
+//[CascadingParameter (Name = "UserPermissions")] protected ThemeInfo ThemeInfo { get; set; }
+//[CascadingParameter (Name = "TitleValue")] protected string Title { get; set; }
+//[CascadingParameter (Name = "RectangleValue")] protected Rectangle rectParam { get; set; }
+
+private int Counter = 1;
+
+void ChildFiredEvent(int counter)
+{
+    Counter = counter;
+    StateHasChanged();
+}
+}
