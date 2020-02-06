@@ -16,16 +16,10 @@ Slide In Side Bar
 <img width="349" height="601"  src=https://barcoderesource.com/blazor/slideinsidebar.png />
 </p>   
 
-Prerequisite
-1. Blazor 0.6 or onwards is installed
-2. Visual Studio 2017 with Blazor Extensions
-
 Build the Admin Dashboard
 1. Clone or Download [Misfits-Rebels-Outcasts/Blazor-Dashboard](https://github.com/Misfits-Rebels-Outcasts/Blazor-Dashboard).
 2. Clone or Download [Misfits-Rebels-Outcasts/Blazor-Charts](https://github.com/Misfits-Rebels-Outcasts/Blazor-Charts).
-3. Launch Blazor-Dashboard.sln in Visual Studio.
-4. Add Existing Project to ChartMan.csproj.
-5. Right Click Dependencies and Add Reference... to ChartMan project.
-6. Rebuild and Run Blazor-Dashboard with F5 or Ctrl-F5.
+3. cd to the Blazor-Dashboard subfolder
+4. dotnet run
 
 
