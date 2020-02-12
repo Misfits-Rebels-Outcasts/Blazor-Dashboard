@@ -22,6 +22,7 @@
     <ProjectReference Include="../../Blazor-Charts/DonutChart/DonutChart.csproj" />
     <ProjectReference Include="../../Blazor-Charts/PieChart/PieChart.csproj" />
     <ProjectReference Include="../../Blazor-Charts/HorizontalBarChart/HorizontalBarChart.csproj" />
+    <ProjectReference Include="../../Blazor-Charts/VerticalBarChart/VerticalBarChart.csproj" />
     <ProjectReference Include="../../Blazor-Charts/LineChart/LineChart.csproj" />
   </ItemGroup>
 
