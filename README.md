@@ -21,5 +21,6 @@ Build the Admin Dashboard
 2. Clone or Download [Misfits-Rebels-Outcasts/Blazor-Charts](https://github.com/Misfits-Rebels-Outcasts/Blazor-Charts).
 3. cd to the Blazor-Dashboard subfolder
 4. dotnet run
+5. Access the dashboard through http://localhost:5000/dashboardZ
 
 
