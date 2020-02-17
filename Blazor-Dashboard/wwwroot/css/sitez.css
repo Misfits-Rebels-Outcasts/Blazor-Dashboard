@@ -15,11 +15,12 @@ app {
     height: 3.5rem;
 
 }
+/*
 .top-row-blank {
     height: 3.5rem;
 
 }
-
+*/
 .top-rowx {
     height: 3.5rem;
 }
@@ -56,6 +57,17 @@ app {
             vertical-align: middle
         }
 
+/*
+display and hide use for displaying and hiding action/user bar
+*/
+.display-user-bar{
+    display: block;
+}
+
+.hide-user-bar{
+    display: none;
+}
+/*
 .top-rowx-blank {
     background-color: #F8F9FB;
     border-bottom: 1px solid #d6d5d5;
@@ -83,7 +95,7 @@ app {
         .top-rowx-blank .navbar .navbar-nav .nav-item .user {
             vertical-align: middle
         }
-
+*/
 
 
 .main {
@@ -119,7 +131,7 @@ app {
             .main .top-row .navbar .navbar-nav .nav-item .user {
                 vertical-align: middle
             }
-
+/*
     .main .top-row-blank .navbar .navbar-collapse .navbar-nav .action {
         vertical-align: middle;
     }
@@ -151,7 +163,7 @@ app {
             .main .top-row-blank .navbar .navbar-nav .nav-item .user {
                 vertical-align: middle
             }
-
+*/
 
 .sidebar {
     position: sticky;
@@ -177,25 +189,22 @@ app {
     }
 
 
-.sidebar-nav-open .ind .top-row {
+.slidebar-nav-open .ind .top-row {
     background-color: rgb(40, 41, 59);
 }
 
-.sidebar-nav-open .ind .navbar-brand {
+.slidebar-nav-open .ind .navbar-brand {
     font-size: 1.1rem;
 }
 
-.sidebar-nav-open .ind .oi {
+.slidebar-nav-open .ind .oi {
     width: 2rem;
     font-size: 1.1rem;
     vertical-align: text-top;
     top: -2px;
 }
-/*******/
 
-/*******/
-
-
+/*consider optimizing as the following use by sidebar and slidebar*/
 .nav-item-side {
     font-size: 0.9rem;
     padding-bottom: 0.5rem;
@@ -259,21 +268,29 @@ app {
 
 
 @media (max-width: 767.98px) {
+    /*
     .main .top-row-blank {
         display: none;
     }
+    */
     .main .top-row {
         top: 0px;
     }
 
+    /*
     .top-rowx-blank {
         display: none;
     }
+    */
 
     .top-rowx {
         top: 50px;
     }
 
+    .hide-user-bar{
+        display: none;
+    }
+    
 }
 
 
@@ -283,14 +300,22 @@ app {
         flex-direction: row;
     }
 
+    .hide-user-bar{
+        display: block;
+    }
+    
+    /*always display whether the top bar hidden or not when large window*/
+    /*
     .main .top-row-blank {
-        display: block; /*always display whether the top bar hidden or not when large window*/
+        display: block; 
     }
-
+    */
+    /*always display whether the top bar hidden or not when large window*/
+    /*
     .top-rowx-blank {
-        display: block; /*always display whether the top bar hidden or not when large window*/
+        display: block; 
     }
-
+    */
     /*
 
     .main .top-row-blank {
@@ -315,7 +340,14 @@ app {
         position: sticky;
         top: 0;
     }
-
+/*
+    .slidebar {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+*/
     .main > div {
         padding-left: 2rem !important;
         padding-right: 1.5rem !important;
@@ -325,11 +357,15 @@ app {
         display: none;
     }
  
+    /*collapse display will be none during small screen*/
     .sidebar .collapse {
         display: block;
     }
-
-
+/*
+    .slidebar .collapse {
+        display: block;
+    }
+*/
 
 
 }
