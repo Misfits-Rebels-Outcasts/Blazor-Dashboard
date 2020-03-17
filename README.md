@@ -19,8 +19,9 @@ Slide In Side Bar
 Build the Admin Dashboard
 1. Clone or Download [Misfits-Rebels-Outcasts/Blazor-Dashboard](https://github.com/Misfits-Rebels-Outcasts/Blazor-Dashboard).
 2. Clone or Download [Misfits-Rebels-Outcasts/Blazor-Charts](https://github.com/Misfits-Rebels-Outcasts/Blazor-Charts).
-3. cd to the Blazor-Dashboard subfolder
-4. dotnet run
-5. Access the dashboard through http://localhost:5000/dashboardZ
+3. Clone or Download [Misfits-Rebels-Outcasts/Blazor-Sparkline](https://github.com/Misfits-Rebels-Outcasts/Blazor-Sparkline). 
+4. cd to the Blazor-Dashboard subfolder
+5. dotnet run
+6. Access the dashboard through http://localhost:5000/dashboardZ
 
 
