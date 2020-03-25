@@ -25,7 +25,8 @@
     <ProjectReference Include="../../Blazor-Charts/VerticalBarChart/VerticalBarChart.csproj" />
     <ProjectReference Include="../../Blazor-Charts/LineChart/LineChart.csproj" />
 
-    <ProjectReference Include="../../Blazor-Sparkline/Sparkline/Sparkline.csproj" />
+    <ProjectReference Include="../../Blazor-Sparkline/Sparklines/Sparklines.csproj" />
+    <ProjectReference Include="../../Blazor-Sparkline/ColumnBars/ColumnBars.csproj" />
 
   </ItemGroup>
 
