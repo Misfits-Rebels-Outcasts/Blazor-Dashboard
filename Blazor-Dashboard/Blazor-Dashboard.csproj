@@ -27,6 +27,9 @@
 
     <ProjectReference Include="../../Blazor-Sparkline/Sparklines/Sparklines.csproj" />
     <ProjectReference Include="../../Blazor-Sparkline/ColumnBars/ColumnBars.csproj" />
+    <ProjectReference Include="../../Blazor-Sparkline/MiniPie/MiniPie.csproj" />
+    <ProjectReference Include="../../Blazor-Sparkline/WinLoss/WinLoss.csproj" />
+    <ProjectReference Include="../../Blazor-Sparkline/BulletBars/BulletBars.csproj" />
 
   </ItemGroup>
 
