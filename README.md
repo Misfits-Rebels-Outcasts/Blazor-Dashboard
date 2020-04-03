@@ -15,6 +15,10 @@ Slide In Side Bar
 <p>
 <img width="349" height="601"  src=https://barcoderesource.com/blazor/slideinsidebar.png />
 </p>   
+Charts and Sparklines
+<p>
+<img width="358" height="550"  src=https://webassemblyman.com/blazor/images/blazorsparklines.png />
+</p>   
 
 Build the Admin Dashboard
 1. Clone or Download [Misfits-Rebels-Outcasts/Blazor-Dashboard](https://github.com/Misfits-Rebels-Outcasts/Blazor-Dashboard).

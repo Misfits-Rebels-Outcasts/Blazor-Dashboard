@@ -188,7 +188,7 @@ display and hide use for displaying and hiding action/user bar
         top: -2px;
     }
 
-
+/*4/2/2020 commented out
 .slidebar-nav-open .ind .top-row {
     background-color: rgb(40, 41, 59);
 }
@@ -203,6 +203,7 @@ display and hide use for displaying and hiding action/user bar
     vertical-align: text-top;
     top: -2px;
 }
+*/
 
 /*consider optimizing as the following use by sidebar and slidebar*/
 .nav-item-side {
