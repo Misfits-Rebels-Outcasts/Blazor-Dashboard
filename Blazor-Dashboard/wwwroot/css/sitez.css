@@ -188,22 +188,24 @@ display and hide use for displaying and hiding action/user bar
         top: -2px;
     }
 
-/*4/2/2020 commented out
-.slidebar-nav-open .ind .top-row {
+/*4/2/2020
+below required to style the slidebar the same way as the sidebars
+*/
+
+.slidebar-container .top-row {
     background-color: rgb(40, 41, 59);
 }
 
-.slidebar-nav-open .ind .navbar-brand {
+.slidebar-container .navbar-brand {
     font-size: 1.1rem;
 }
 
-.slidebar-nav-open .ind .oi {
+.slidebar-container .oi {
     width: 2rem;
     font-size: 1.1rem;
     vertical-align: text-top;
     top: -2px;
 }
-*/
 
 /*consider optimizing as the following use by sidebar and slidebar*/
 .nav-item-side {
@@ -237,8 +239,6 @@ display and hide use for displaying and hiding action/user bar
             background-color: rgba(255,255,255,0.1);
             color: white;
         }
-
-    
 
 .content {
     padding-top: 1.1rem;
