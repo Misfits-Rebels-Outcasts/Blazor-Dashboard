@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>BLAZOR DASHBOARD</title>
     <base href="/" />
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
@@ -39,32 +39,6 @@
 
 
     <script>
-        /*
-        var stopEvents = new Boolean("false");
-        function init() {
-            stopEvents = false;
-        }
-        window.onload = init;
-        function LaunchSideBar() {
-
-            if (stopEvents)
-                return;
-            ev = window.event;
-            ev.stopPropagation();
-            ev.preventDefault();
-            document.getElementById('nav-menu').style.marginTop = (window.scrollY - 5) + "px";
-            document.getElementById('inner-nav-menu').style.height = (window.innerHeight) + "px";
-
-            var container = document.getElementById('slidebar-container');
-            container.className = 'slidebar-container';
-            container.classList.add('sidebar-nav--open');
-
-            setTimeout(function () {
-                document.addEventListener('click', HideSideBar);
-            }, 25);
-            stopEvents = true;
-        }
-        */
         function HideSideBar() {
         
             ev = window.event;

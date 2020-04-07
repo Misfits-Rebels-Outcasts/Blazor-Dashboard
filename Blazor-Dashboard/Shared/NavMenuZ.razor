@@ -61,7 +61,7 @@
 </nav>
 -->
 
-@functions {
+@code {
     [Parameter]
     public bool SlideIn { get; set; } = false;
 
@@ -89,7 +89,7 @@
     [Parameter]
     public Action SlideInSideBarTriggered { get; set; }
 
-    public async Task LaunchSideBar()
+    public void LaunchSideBar()
     {
         BlazorDashboard.XSingleton.NavBarDisplay = false;
         ToggleNavMenuChanged();

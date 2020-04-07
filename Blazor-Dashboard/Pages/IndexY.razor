@@ -3,7 +3,6 @@
 @page "/dashboardY"
 
 <div class="jumbotron" style="background:white;margin-left:16px;margin-right:16px;border-style: solid;border-width: 1px;border-color:lightgray">
-        
     <div class="container-fluid">
         <h1>Admin Dashboard</h1>
         <p>This is an ultra lightweight admin dashboard based in Blazor. We are experimenting this in our ASP.NET project. The aim is to use Blazor, CSS, CSS Grid and Bootsrap for front end development with the design philosophy of keeping the components modern and lightweight with minimal dependencies. We strongly believe that less dependencies means easier of upgrade. On the other hand, if Blazor or Bootstrap introduces new components that overlap with those in this project, the idea is to let the components in Blazor and Boostrap take precedence. This template is available under the MIT License, so feel free to play with it.</p>
@@ -37,7 +36,7 @@
     <hr />
     <div class="card-deck">
         <div class="card">
-            <div class="card-header">Donut Chart</div>
+            <div class="card-header">Line Chart</div>
             <div class="card-body">
                 <h5 class="card-title">Grid Rendering</h5>
                 <!--
@@ -45,8 +44,20 @@
                 <SparklineMan InputData="[30,0,6,20,45,48,51,60,76,77,78,79,90,100,30,90,95,100,40,0,0,0],[50,70,6,20,45,8,51,60,6,77,8,79,0,10,100,10,0,50,30,0,0,0],[100,0,16,25,48,45,1,0,6,37,78,79,90,90,91,100,80,0,40,0,0,0],[60,0,16,25,48,45,1,0,6,37,78,79,90,90,91,99,80,0,40,0,0,0],[80,0,16,25,48,45,1,0,6,37,78,79,90,90,91,95,80,0,40,0,0,0]" StartColor="#ce4b99" StopColor="#377bbc" SegmentWidth="40"></SparklineMan>
                 <SparklineMan InputData="[30,0,6,20,45,48,51,60,76,77,78,79,90,100,30,90,95,100,40,0,0,0],[50,70,6,20,45,8,51,60,6,77,8,79,0,10,100,10,0,50,30,0,0,0],[100,0,16,25,48,45,1,0,6,37,78,79,90,90,91,100,80,0,40,0,0,0],[60,0,16,25,48,45,1,0,6,37,78,79,90,90,91,99,80,0,40,0,0,0]" StartColor="#ce4b99" StopColor="#377bbc" SegmentWidth="20"></SparklineMan>        
                 <LineChartMan InputData="[30,70,42,50,3,55,35,22 ],[40,50,32,70,55,15,15,12],[0,10,10,10,10,20,70,70]"></LineChartMan>
-                -->
                 <LineChart InputData="[30,70,42,50,3,55,35,22 ],[40,50,32,70,55,15,15,12],[0,10,10,10,10,20,70,70]"
+                           InputLabels="App Store,Website,Partners">
+                </LineChart>
+                <LineChart InputSeries1="30,70,42,50,3,55,35,22"
+                           InputSeries2="40,50,32,70,55,15,15,12"
+                           InputSeries3="0,10,10,10,10,20,70,70"
+                           InputLabels="App Store,Website,Partners">
+                </LineChart>
+                -->
+
+                <LineChart InputSeries1="30,70,42,50,3,55,35,22"
+                           InputSeries2="40,50,32,75,55,15,15,12,66"
+                           InputSeries3="0,10,10,10,10,20,70,70"
+                           XAxisLabels="Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep"
                            InputLabels="App Store,Website,Partners">
                 </LineChart>
 
@@ -58,7 +69,7 @@
             <div class="card-body">
                 <h5 class="card-title">By Channels</h5>                
                 <PieChart InputData="10,30,20,10,10,10,5,5" 
-                            InputLabels="App Store,Website,Partners,Direct,Channels,Retail,Distributors,Affiliates">
+                          InputLabels="App Store,Website,Partners,Direct,Channels,Retail,Distributors,Affiliates">
                 </PieChart>
                 <a href="#" class="btn btn-primary">Details</a>
             </div>
@@ -72,7 +83,6 @@
             <div class="card-body">
                 <h5 class="card-title">RenderTreeBuilder</h5>
                 <DonutChart InputData="50,30,20" InputLabels="App Store,Website,Partners" PrimaryText="150" SecondaryText="Sales"></DonutChart>
-
                 <!--
                 <p>
                 Width:rectParam.Width
@@ -97,6 +107,18 @@
                     InputLabels="App Store,Website,Partners,Direct,Channels,Retail,Distributors,Affiliates,Phone,TV">
                 </HorizontalBarChart>
 
+                <!--
+                <HorizontalBarChart 
+                    InputData="10,20,30,40,50,60,70,80,90"
+                    InputLabels="App Store,Website,Partners,Direct,Channels,Retail,Distributors,Affiliates,Phone">
+                </HorizontalBarChart>
+
+                <HorizontalBarChart 
+                    InputData="30,20,30,40,130,60,70,80,90"
+                    InputLabels="App Store,Website,Partners,Direct,Channels,Retail,Distributors,Affiliates,Phone">
+                </HorizontalBarChart>
+                -->
+
                 <a href="#" class="btn btn-primary">Details</a>
             </div>
         </div>
@@ -108,7 +130,12 @@
                 <VerticalBarChart InputData="30,70,42,50,3,55,35,22,10,30"
                     InputLabels="App Store,Website,Partners,Direct,Channels,Retail,Distributors,Affiliates,Phone,TV">
                 </VerticalBarChart>
-                
+                <!--
+                <VerticalBarChart InputData="30,70,42,150,3,55,35,22,10,30"
+                    InputLabels="App Store,Website,Partners,Direct,Channels,Retail,Distributors,Affiliates,Phone,TV">
+                </VerticalBarChart>
+                -->
+
                 <a href="#" class="btn btn-primary">Details</a>
             </div>
         </div>
