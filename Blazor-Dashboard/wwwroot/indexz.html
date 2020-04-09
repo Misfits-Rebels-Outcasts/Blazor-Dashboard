@@ -8,7 +8,7 @@
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
     
     <link href="css/sitez.css" rel="stylesheet" />
-    <link href="css/sidebarz.css"  rel="stylesheet" />
+    <link href="css/slidebarz.css"  rel="stylesheet" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
@@ -44,7 +44,7 @@
             ev = window.event;
             ev.stopPropagation();
             ev.preventDefault();
-            document.getElementById('slidebar-container').classList.remove('slidebar-open');
+            document.getElementById('slidebar').classList.remove('slidebar-open');
             document.removeEventListener('click', HideSideBar);
             stopEvents = false;
         }

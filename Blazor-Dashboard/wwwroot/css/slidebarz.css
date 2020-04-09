@@ -1,6 +1,6 @@
 html,
 body,
-.slidebar-container,
+.slidebar,
 .slidebar-cover
 {
 	height: 100%;
@@ -13,7 +13,7 @@ body,
     flex-direction: column;
 }
 
-.slidebar-container {
+.slidebar {
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -79,7 +79,7 @@ body,
 
 @media (max-width: 767.98px) {
 
-    .slidebar-container {
+    .slidebar {
         flex-direction: column;
     }
 

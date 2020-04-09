@@ -5,21 +5,12 @@
 -->
 <div class="sidebar">
     <!--SideTopBar-->
-    <!--
-    <NavMenuZ ToggleNavMenuChanged="Redraw" SlideInSideBarTriggered="LaunchSlideInSideBar" />
-    -->
     <NavMenuZ ToggleNavMenuChanged="Redraw" SlideInSideBarTriggered="LaunchSlideInSideBar" />
 
 
 </div>
 <div class="big-main-container" style="width:100%">
     <!--TopBar-->
-    <!--
-    <div class="big-main-container" style="width:100%" onclick=HideSlideInSideBar>
-        <div id="top-bar" class=(BlazorDashboard.XSingleton.NavBarDisplay ? "top-rowx" : "top-rowx-blank")>
-
-        <div id="top-bar" class=@(BlazorDashboard.XSingleton.NavBarDisplay ? "top-rowx" : "top-rowx-blank" )>
-        -->
     <div id="top-bar" class=@(BlazorDashboard.XSingleton.NavBarDisplay ? "top-rowx display-user-bar" : "top-rowx hide-user-bar" )>
         <nav id="nav-menux" class="navbar navbar-expand navbar-light bg-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
@@ -70,61 +61,26 @@
 
     </div>
 
-    <div id="slidebar-container" class=@navstring style="background:#e9ecef">
-        <!--
-        <div id="slidebar-container" class=navstring style="background:#e9ecef">
-            style="background:#e9ecef;"
-        <div class="slidesidebar">
-            <NavMenu SlideIn="true" CollapseSideMenu="false" />
-        </div>
-            -->
+    <div id="slidebar" class=@navstring style="background:#e9ecef">
         <!--SlideInSideBar-->
-        <!--
         <nav id="nav-menu" class="slidebar-nav ind" style="margin-top:-6px">
             <div class="top-row pl-4 navbar navbar-dark">
                 <a class="navbar-brand" href="">BLAZOR DASHBOARD</a>
             </div>
             <div id="inner-nav-menu" class="" style="overflow:auto">
                 <ul class="nav flex-column">
-                    <li class="nav-item-side px-3">
+                    <li class="nav-item px-3">
                         <NavLink class="nav-link" href="" Match=NavLinkMatch.All>
                             <span class="oi oi-home" aria-hidden="true"></span> Home
                         </NavLink>
                     </li>
 
-                    <li class="nav-item-side px-3">
+                    <li class="nav-item px-3">
                         <NavLink class="nav-link" href="counter">
                             <span class="oi oi-plus" aria-hidden="true"></span> Counter
                         </NavLink>
                     </li>
-                    <li class="nav-item-side px-3">
-                        <NavLink class="nav-link" href="fetchdata">
-                            <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
-                        </NavLink>
-                    </li>
-
-                </ul>
-            </div>
-        </nav>
-        -->
-        <nav id="nav-menu" class="slidebar-nav ind" style="margin-top:-6px">
-            <div class="top-row pl-4 navbar navbar-dark">
-                <a class="navbar-brand" href="">BLAZOR DASHBOARD</a>
-            </div>
-            <div id="inner-nav-menu" class="" style="overflow:auto">
-                <ul class="nav flex-column">
-                    <li class="nav-item-side px-3">
-                        <NavLink class="nav-link" href="" Match=NavLinkMatch.All>
-                            <span class="oi oi-home" aria-hidden="true"></span> Home
-                        </NavLink>
-                    </li>
-
-                    <li class="nav-item-side px-3">
-                        <NavLink class="nav-link" href="counter">
-                            <span class="oi oi-plus" aria-hidden="true"></span> Counter
-                        </NavLink>
-                    </li>
-                    <li class="nav-item-side px-3">
+                    <li class="nav-item px-3">
                         <NavLink class="nav-link" href="fetchdata">
                             <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
                         </NavLink>
@@ -151,7 +107,7 @@
     //string TitleValue="Hello Title";
 
     bool slideIn=false;
-    string navstring="slidebar-container";
+    string navstring="slidebar";
     /*
     public async static Task SayHello()
     {
@@ -168,7 +124,7 @@
     {
     //StateHasChanged();
     Console.WriteLine("LaunchSlideInSideBar");
-    navstring="slidebar-container slidebar-open";
+    navstring="slidebar slidebar-open";
     slideIn=true;
     }
     void HideSlideInSideBar()
@@ -178,7 +134,7 @@
     Console.WriteLine("HideSlideInSideBar");
     if (slideIn)
     {
-    navstring="slidebar-container";
+    navstring="slidebar";
     slideIn=false;
     }
     }
